@@ -44,7 +44,7 @@
   color: "#551825";
 }
 .h{
-  min-height: 90vh;
+  min-height: 75vh;
   padding-top: 1rem;
 }
 .heroTitle{
@@ -204,6 +204,25 @@
 .logo {
   height: 1em;
   margin-left: 0.5rem;
+}
+
+.success{
+  color: #551825;
+  max-width: 500px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items:center;
+  padding : 2rem;
+  text-align: center;
+  border: 1px solid #2c2828;
+  border-radius: 1rem;
+}
+
+.success h2{
+  margin: 0;
+  text-transform: uppercase;
 }
 
 @media (max-width: 768px){

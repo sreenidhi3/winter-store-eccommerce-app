@@ -31,12 +31,25 @@ export const ProductCard=({item})=>{
                 <div className={styles.buttonGrp}>
                       <button 
                         className={styles.buttonPrimary} 
-                        onClick ={()=>clickHandler(cart, item)}
+                        onClick ={()=>{
+                            checkItem(cart, item.id) 
+                            ?
+                            dispatch({type: "REMOVE_ITEM", payload: item}) 
+                            :
+                            dispatch({type: "ADD_TO_CART", payload: item})}
+                        }
                         >
                             {checkItem(cart, item.id) ? "Remove from Cart" : "Add To Cart"} 
                     </button>
                     <button 
-                        className={styles.buttonSecondary} 
+                        className={styles.buttonSecondary}
+                        onClick ={()=>{
+                            checkItem(wishlist, item.id) 
+                            ?
+                            dispatch({type: "REMOVE_FROM_WISHLIST", payload: item}) 
+                            :
+                            dispatch({type: "ADD_TO_WISHLIST", payload: item})}
+                        } 
                         >
                             {checkItem(wishlist, item.id) ? <FontAwesomeIcon icon={faHeart} /> : <FontAwesomeIcon icon={farHeart} />}
                     </button>
