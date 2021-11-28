@@ -20,7 +20,7 @@ export default function Home() {
   const {cart, wishlist, dispatch} = useContext(Context);
   console.log(cart, dispatch);
   return (
-    <div className={styles.container} style={{color: "#b74960", backgroundColor: "#F2F0F0"}}>
+    <div className={styles.container} style={{ backgroundColor: "#F2F0F0"}}>
       <Head>
         <title>Ecommerce Store</title>
         <meta name="description" content="Created by Sreenidhi Bendre" />
@@ -31,7 +31,7 @@ export default function Home() {
           <div className={styles.heroText}>
             <h3>Check out the new</h3>
               <h1 className={styles.heroTitle}>Winter'21</h1>
-              <h3> collection by <span style={{color: "#551825"}}>WinterStore</span></h3>
+              <h3> collection by <span>WinterStore</span></h3>
           </div>
           <div className={styles.heroImage}> <Image src='/winter_collection.png' width={450} height={400}/></div>
        </div>

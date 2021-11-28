@@ -22,7 +22,7 @@ export default function Shop(){
         </div>
         <div className={styles.container} style={{margin:"auto"}}>
             {
-                category!=="All" && "Showing results for "+category+"..."
+                category!=="All" && "Showing results for "+category
             }
         </div>
         <div className={styles.cardContainer}>

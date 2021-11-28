@@ -17,7 +17,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 1px solid var(--dark-gray);
+  color: var(--dark-gray);
   
 }
 .navLink{
@@ -31,7 +32,7 @@
 }
 .brand{
   font-size: 1.5rem;
-  color: "#551825" !important;
+  color: var(--dark-gray);
   font-weight: 700;
 }
 .footer {
@@ -41,7 +42,7 @@
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
-  color: "#551825";
+  color: var(--dark-gray);
 }
 .h{
   min-height: 75vh;
@@ -55,19 +56,19 @@
 }
 .hero{
   margin: 1rem;
-  background-color: #e7ca98;
+  background-color: var(--dark-voilet);
   flex-direction: row;
   align-items: center;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  border: 3px solid #eee7dc;
-  outline: 7px solid #e7ca98;
+  border: 3px solid var(--light-purple);
+  outline: 7px solid var(--dark-voilet);
 }
 .heroText{
   width: 50%;
   padding: 1rem;
-  color: #994758
+  color: var(--light-purple);
 }
 .footer a {
   display: flex;
@@ -138,6 +139,7 @@
 }
 
 .card {
+  background-color: var(--white);
   margin: 1rem;
   padding: 1.5rem;
   text-align: left;
@@ -152,17 +154,17 @@
 .card:hover,
 .card:focus,
 .card:active {
-  border-color: #A0443F;
+  border-color: var(--light-gray);
 }
 
 .prodTitle{
-  color: #A0443F;
+  color: var(--dark-voilet);
 }
 .prodDetails{
-  color: #2c2828;
+  color: var(--dark-gray);
 }
 .prodDesc{
-  color: #2c2828;
+  color: var(--light-gray);
   font-size: 0  rem;
 }
 
@@ -176,7 +178,7 @@
   flex-wrap: wrap;
 }
 .buttonPrimary{
-  background-color: #A0443F; 
+  background-color: var(--dark-voilet); 
   border: none;
   border-radius: 0.3rem;
   color: white;
@@ -190,9 +192,9 @@
 
 .buttonSecondary{
   background-color: white; 
-  border: 1px solid #A0443F;
+  border: 1px solid var(--dark-voilet);
   border-radius: 0.3rem;
-  color: #A0443F;
+  color: var(--dark-voilet);
   padding: 1rem;
   text-align: center;
   text-decoration: none;
