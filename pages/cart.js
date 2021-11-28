@@ -21,6 +21,25 @@ export default function CartPage(){
     }
     return(
         <div style={{minHeight: "75vh", textAlign: "center"}}>
+            <div className={styles.cardContainer}>
+            { 
+                cart.length ? cart.map((item)=>{
+                    return(
+                        <ProductCard key={item.id} item={item}/>
+                        )
+                    }) 
+                    : <div className={styles.container}> 
+                    <div style={{margin: "2rem"}}><Image  src="/undraw_empty_cart_co35.svg" width={200} height={200}/></div>
+                   <h2> Oops! Your Cart is empty.</h2>
+                   <h3>Go to <Link href="/shop"><a style={{color: "#810081", textTransform:"uppercase"}}>Shop</a></Link> and start shopping</h3>
+                </div>
+            } 
+            </div>  
+            <div className={styles.bill}>
+                <h2 style={{textAlign:"center"}}>
+                    Total Amount : Rs. {calculateTotal()}
+                </h2>
+            </div>
             { 
             !cart.length 
             ? "" :
@@ -33,25 +52,6 @@ export default function CartPage(){
             </div>
 
             }
-            <div className={styles.cardContainer}>
-            { 
-                cart.length ? cart.map((item)=>{
-                    return(
-                        <ProductCard key={item.id} item={item}/>
-                    )
-                }) 
-                : <div className={styles.container}> 
-                    <div style={{margin: "2rem"}}><Image  src="/undraw_empty_cart_co35.svg" width={200} height={200}/></div>
-                   <h2> Oops! Your Cart is empty.</h2>
-                   <h3>Go to <Link href="/shop"><a style={{color: "#810081", textTransform:"uppercase"}}>Shop</a></Link> and start shopping</h3>
-                </div>
-            } 
-            </div>  
-            <div className={styles.bill}>
-                <h2 style={{textAlign:"center"}}>
-                    Total Amount : Rs. {calculateTotal()}
-                </h2>
-            </div>
         </div>
             
     )
